@@ -1,0 +1,14 @@
+
+langchain-google-genai
+
+# --- RAGAS Evaluation ---
+ragas[all]  # includes all metrics, huggingface, sentence transformers, etc.
+
+
+# --- LLMs (Google Gemini) ---
+google-generativeai  # for ChatGoogleGenerativeAI
+
+# --- Dataset format ---
+datasets  # required by RAGAS
+
+chromadb

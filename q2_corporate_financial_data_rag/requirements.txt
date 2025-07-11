@@ -1,0 +1,67 @@
+# Core RAG Dependencies
+langchain-google-genai
+google-generativeai
+chromadb
+
+# RAGAS Evaluation
+ragas[all]
+datasets
+
+# Production FastAPI with async support
+fastapi[all]
+uvicorn[standard]
+gunicorn
+
+# Redis for caching
+redis[hiredis]
+aioredis>=2.0.0
+
+# Background job processing
+celery[redis]
+redis-py-cluster
+
+# Database and connection pooling
+asyncpg
+sqlalchemy[asyncio]
+alembic
+
+# Monitoring and observability
+langsmith
+prometheus-client
+structlog
+python-json-logger
+
+# Load testing and performance
+locust
+httpx
+aiohttp
+
+# Financial data processing
+pandas
+numpy
+pdfplumber
+PyPDF2
+tabula-py
+
+# Security and rate limiting
+slowapi
+python-jose[cryptography]
+passlib[bcrypt]
+
+# Configuration management
+pydantic-settings
+python-dotenv
+
+# Development and testing
+pytest
+pytest-asyncio
+pytest-cov
+black
+flake8
+mypy
+
+# Additional utilities
+tenacity
+backoff
+cachetools
+python-multipart

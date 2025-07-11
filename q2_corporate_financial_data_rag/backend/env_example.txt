@@ -1,0 +1,77 @@
+# Financial Intelligence RAG System Configuration
+
+# Application Settings
+APP_NAME="Financial Intelligence RAG System"
+APP_VERSION="1.0.0"
+DEBUG=false
+HOST=0.0.0.0
+PORT=8000
+WORKERS=4
+
+# Redis Configuration
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
+REDIS_DB=0
+REDIS_URL=redis://localhost:6379/0
+
+# Cache Settings
+CACHE_TTL_REALTIME=3600
+CACHE_TTL_HISTORICAL=86400
+CACHE_KEY_PREFIX=finrag
+FINANCIAL_METRICS_CACHE_TTL=7200
+
+# Rate Limiting
+RATE_LIMIT_REQUESTS=100
+RATE_LIMIT_WINDOW=3600
+RATE_LIMIT_ENABLED=true
+
+# Concurrency Settings
+MAX_CONCURRENT_REQUESTS=200
+REQUEST_TIMEOUT=30
+
+# Vector Store Settings (ChromaDB)
+CHROMA_API_KEY=your_chroma_api_key_here
+CHROMA_TENANT=your_chroma_tenant_here
+CHROMA_DB=your_chroma_db_here
+COLLECTION_NAME=financial_documents
+
+# LLM Settings (Google Gemini)
+GOOGLE_API_KEY=your_google_api_key_here
+MODEL_NAME=gemini-2.0-flash
+MODEL_TEMPERATURE=0.0
+MAX_TOKENS=
+
+# Monitoring Settings (LangSmith)
+LANGSMITH_API_KEY=your_langsmith_api_key_here
+LANGSMITH_PROJECT=financial-rag-system
+LANGSMITH_ENDPOINT=https://api.smith.langchain.com
+
+# Metrics and Monitoring
+ENABLE_METRICS=true
+METRICS_PORT=8001
+
+# Background Jobs (Celery)
+CELERY_BROKER_URL=redis://localhost:6379/1
+CELERY_RESULT_BACKEND=redis://localhost:6379/2
+
+# Document Processing
+CHUNK_SIZE=1000
+CHUNK_OVERLAP=200
+MAX_FILE_SIZE=52428800
+SUPPORTED_FILE_TYPES=["pdf", "csv"]
+
+# Security Settings
+SECRET_KEY=your-secret-key-change-in-production
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# CORS Settings
+CORS_ORIGINS=["*"]
+CORS_ALLOW_CREDENTIALS=true
+CORS_ALLOW_METHODS=["*"]
+CORS_ALLOW_HEADERS=["*"]
+
+# Logging Settings
+LOG_LEVEL=INFO
+LOG_FORMAT=json 
